@@ -1,0 +1,154 @@
+/* Base styles */
+:root {
+  --color-bg: #f5f7fb;
+  --color-primary: #3b5bfd;
+  --color-primary-soft: #e1e6ff;
+  --color-accent: #ffb347;
+  --color-text: #1b1f3b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding-top: 64px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  font-size: 0.95rem;
+}
+
+.navbar-brand {
+  letter-spacing: 0.03em;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Page headers */
+.hero-section {
+  background-color: #0f1b3d;
+  color: #ffffff;
+}
+
+.hero-section h1,
+.hero-section p,
+.hero-section .lead,
+.page-header-section h1,
+.page-header-section p,
+.page-header-section .lead {
+  color: #ffffff;
+}
+
+.hero-photo-wrapper {
+  width: 260px;       
+  aspect-ratio: 1 / 1;  
+  border-radius: 24px;  
+  overflow: hidden;      
+  margin: 0 auto;        
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hero-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 95% 5%;
+}
+
+/* Block with photo and short bio on about page */
+.about-intro {
+  gap: 2rem;          
+}
+.about-intro-photo {
+  flex-shrink: 0;     
+}
+.about-intro-text {
+  flex: 1;            
+}
+
+/* Stacking elements vertically on small screens */
+@media (max-width: 767.98px) {
+  .about-intro {
+    display: block;
+  }
+}
+
+.page-header-section {
+  background-color: #0f1b3d;
+  color: #ffffff;
+}
+
+/* Layout */
+.card {
+  border-radius: 0.9rem;
+}
+
+.project-card img {
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+}
+
+.about-soft-card {
+  background-color: var(--color-bg);     
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.04);       
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+}
+
+/* Forms */
+form .form-label {
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2f47c8;
+  border-color: #2f47c8;
+}
+
+/* Utility tweaks for spacing on small screens */
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .hero-photo-wrapper {
+    max-width: 220px;
+  }
+}
